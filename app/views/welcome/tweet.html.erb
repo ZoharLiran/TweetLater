@@ -1,5 +1,3 @@
 <h2>Tweet Away</h2>
-<%= form_for @tweet do |f|%>
-  <%= f.text_field :content %>
-  <%= f.submit "Tweet!" %>
-<% end %>
+<input type="text" id="user_tweet_input" placeholder="Write a tweet">
+<input type="submit" id="tweet_submit" value="submit">
