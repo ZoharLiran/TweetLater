@@ -2,7 +2,7 @@ RailsTweetLaterOmniauth::Application.routes.draw do
 
   root 'welcome#index'
   get '/auth/:provider', to: 'sessions#create'
-  get '/auth/:provider/callback', to: 'welcome#tweet'
+  get '/auth/:provider/callback', to: 'welcome#signin_callback'
   resources :tweets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
