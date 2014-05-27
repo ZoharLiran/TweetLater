@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'pry'
 
 # workers
-gem 'twitter'
+gem 'twitter', "~>5.0.0"
 gem 'sidekiq'
 gem 'redis'
 
