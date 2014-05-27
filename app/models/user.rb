@@ -3,6 +3,11 @@ class User < ActiveRecord::Base
 
   def tweet(content)
     @tweet = self.tweets.create!(content: content)
-    TweetWorker.perform_async(@tweet.id)
+    send_worker(@tweet.id)
+  end
+
+  private
+  def send_worker(id)
+    TweetWorker.perform_async(id)
   end
 end

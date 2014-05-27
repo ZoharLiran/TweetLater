@@ -1,5 +1,4 @@
 module TwitterHelper
-  require 'twitter'
   
   def client(oauth_hash)
     # Twitter API
