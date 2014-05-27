@@ -1,5 +1,6 @@
 <h1>Hi <%= @name %></h1>
 <h2>Tweet Away</h2>
-<form action=""></form>
-<input type="text" id="user_tweet_input" placeholder="Write a tweet">
-<input type="submit" id="tweet_submit" value="submit">
+<form action="/users/<%= @screen_name %>/tweet" method="post">
+  <input type="text" id="tweet" name="tweet" placeholder="Write a tweet">
+  <input type="submit" id="tweet_submit" value="submit">
+</form>
